@@ -83,3 +83,18 @@ pnpm changeset version
 
 pnpm changeset publish
 ```
+
+## 问题
+>  `an error occurred while publishing @holyer-space/test-a: E404 Not Found - PUT https://registry.npmjs.org/@holyer-space%2ftest-a - Scope not found` 
+> 无法将私有包发布到公有仓库中 需要在npmjs官网中添加同名组织
+> 这个错误提示表明在发布 @holyer-space/test-a 包时出现了问题。具体错误是 E404 Not Found - PUT https://registry.npmjs.org/@holyer-space%2ftest-a - Scope not found，意味着无法找到 @holyer-space 这个作用域。
+
+可能的原因和解决方法如下：
+
+作用域不存在：确保你在 npm 上注册了 @holyer-space 这个作用域。如果没有，请先在 npm 上创建该作用域。
+
+登录问题：确认你已经登录到正确的 npm 帐户。可以使用 npm login 命令登录到正确的帐户，并确保你具有发布 @holyer-space 作用域下的包的权限。
+
+检查仓库地址：检查你的 .npmrc 文件或 package.json 文件中的仓库地址是否正确。确保你的仓库地址指向正确的 npm 仓库。
+
+重试发布：如果以上步骤都没有解决问题，可以尝试重新发布。在重新发布之前，可以尝试删除本地的 node_modules 文件夹，并重新安装依赖项。

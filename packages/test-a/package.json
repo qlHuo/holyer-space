@@ -1,6 +1,6 @@
 {
   "name": "@holyer-space/test-a",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -8,10 +8,13 @@
     "dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@holyer-space/test": "workspace:^1.0.0"
+    "@holyer-space/test": "workspace:^1.0.2"
   }
 }
